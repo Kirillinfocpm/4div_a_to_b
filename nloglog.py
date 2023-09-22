@@ -51,14 +51,14 @@ while t == 1:
 tm0 = time.perf_counter()
 c = []
 pr = []
-for j in range(0, r + 1):
-    pr.append(0)
+for j in range(0, r // 2 + 5):
+    pr.append(False)
 prm = []
-for i in range(2, r + 1):
-    if pr[i] == 0:
+for i in range(2, r // 2 + 5):
+    if pr[i] == False:
         prm.append(i)
-        for j in range(i * i, r + 1, i):
-            pr[j] = 1
+        for j in range(i * i, r // 2 + 5, i):
+            pr[j] = True
 n = len(prm)
 kl = 0
 l = 1
